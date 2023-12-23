@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+</head>
+
+<body>
+    <h2>Image Upload</h2>
+
+    <form id="imageForm" enctype="multipart/form-data">
+        <label for="image">Select an image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+        <br>
+        <button type="button" onclick="uploadImage()">Upload Image</button>
+    </form>
+
+    <div id="resultContainer" style="display: none;">
+        <h3>Result</h3>
+        <p id="resultMessage"></p>
+    </div>
+
+    <script>
+        function uploadImage() {
+            const form = document.getElementById('imageForm');
+            const formData = new FormData(form);
+
+            fetch('http://localhost:8000/upload/', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    displayResult(data);
+                })
+                .catch(error => {
+                    console.error('Error during image upload:', error);
+                });
+        }
+
+        function displayResult(data) {
+            const resultContainer = document.getElementById('resultContainer');
+            const resultMessage = document.getElementById('resultMessage');
+
+            resultMessage.textContent = data.message || 'Error during image upload.';
+            resultContainer.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
