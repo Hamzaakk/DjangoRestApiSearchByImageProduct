@@ -46,13 +46,13 @@ Provide instructions on how to set up and run your project. Include the followin
 ```bash
 python manage.py migrate
 ```
-###4-run server
+### 4-run server
 ```bash
 python manage.py runserver
 ```
 
 
-###Contact
-###Email
+### Contact
+### Email
    ```bash
 aakkaouihamza@gmail.com
