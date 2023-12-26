@@ -42,6 +42,7 @@ Provide instructions on how to set up and run your project. Include the followin
    ```bash
    pip install -r requirements.txt
   ```
+if we have some probleme try to create venv use conda python 3.10 it work good
 ### 3-migrate all table in database mysql
 ```bash
 python manage.py migrate
