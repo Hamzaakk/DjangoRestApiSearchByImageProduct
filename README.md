@@ -36,8 +36,8 @@ Provide instructions on how to set up and run your project. Include the followin
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-project.git
-   cd your-project
+   git clone https://github.com/Hamzaakk/DjangoRestApiSearchByImageProduct.git
+   cd DjangoRestApiSearchByImageProduct
 ### 2-install all packages 
    ```bash
    pip install -r requirements.txt
