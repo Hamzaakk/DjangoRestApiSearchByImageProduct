@@ -28,7 +28,8 @@ Other dependencies...
 ## Prerequisites
 - Python 3.12
 - Django 4.2.8
-- i use virualenv python 3.9
+- i use virual env python 3.9
+
 
 ## Getting Started
 Provide instructions on how to set up and run your project. Include the following sections:
@@ -42,6 +43,7 @@ Provide instructions on how to set up and run your project. Include the followin
    ```bash
    pip install -r requirements.txt
   ```
+- if u have problem use conda 
 if we have some probleme try to create venv use conda python 3.10 it work good
 ### 3-migrate all table in database mysql
 ```bash
